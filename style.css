@@ -1,0 +1,45 @@
+html {
+    font-size: 30px;
+}
+.title {
+    margin-left: 30px;
+}
+
+.box-img {
+    display: flex;
+    width: 97%;
+    margin: 0 auto;
+}
+
+.img-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    margin: 10px;
+}
+
+input{
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 30PX;
+    border: 1px solid grey;
+    /* border-bottom: 1px solid grey; */
+    border-radius: 20px;
+}
+
+img {
+    margin-bottom: 15px;
+    border-radius: 5%;           /* viền ảnh */
+    width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+    body {
+        background-color: lightblue;
+    }
+
+    html {
+        font-size: 10px;
+    }
+}
