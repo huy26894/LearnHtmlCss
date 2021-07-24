@@ -9,13 +9,15 @@ html {
     display: flex;
     width: 97%;
     margin: 0 auto;
+    flex-wrap: wrap;                /* xuống hàng khi vượt quá px màn hìh*/
 }
 
 .img-column {
     display: flex;
     flex-direction: column;
-    width: 100%;    
-    margin: 10px;
+    width: 25%;    
+    padding: 10px;
+    box-sizing: border-box;         /* thiết lập giá trị này thì sẽ bao gồm cả phần nội dung và padding*/
 }
 
 input{
@@ -33,12 +35,25 @@ img {
     width: 100%;
 }
 
-
 @media screen and (max-width: 800px) {
     body {
         background-color: lightblue;
     }
+    .img-column {
+        width: 50%;
+    }
+    html {
+        font-size: 10px;
+    }
+}
 
+@media screen and (max-width: 600px) {
+    body {
+        background-color: grey;
+    }
+    .img-column {
+        width: 100%;
+    }
     html {
         font-size: 10px;
     }
