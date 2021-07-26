@@ -35,6 +35,23 @@ img {
     width: 100%;
 }
 
+.image{
+    position: relative;
+}
+
+.icon{
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    border-radius: 50%;
+    width: 10%;
+    visibility: hidden;
+}
+
+.image:hover{
+    visibility: visible;
+}
+
 @media screen and (max-width: 800px) {
     body {
         background-color: lightblue;
