@@ -48,9 +48,10 @@ img {
     visibility: hidden;
 }
 
-.image:hover{
+.image:hover .icon{
     visibility: visible;
 }
+
 
 @media screen and (max-width: 800px) {
     body {
