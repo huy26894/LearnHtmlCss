@@ -1,15 +1,19 @@
+body{
+    background-image: url("picture/phong.jpg");         /* phông nền */
+}
 html {
     font-size: 30px;
 }
 .title {
     margin-left: 30px;
+    color: teal;
 }
 
 .box-img {
     display: flex;
     width: 97%;
-    margin: 0 auto;
-    flex-wrap: wrap;                /* xuống hàng khi vượt quá px màn hìh*/
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 .img-column {
@@ -17,7 +21,7 @@ html {
     flex-direction: column;
     width: 25%;    
     padding: 10px;
-    box-sizing: border-box;         /* thiết lập giá trị này thì sẽ bao gồm cả phần nội dung và padding*/
+    box-sizing: border-box;
 }
 
 input{
@@ -29,29 +33,61 @@ input{
     border-radius: 20px;
 }
 
-img {
-    margin-bottom: 15px;
+img {   
     border-radius: 5%;           /* viền ảnh */
     width: 100%;
 }
 
-.image{
-    position: relative;
+.img {
+    position: relative;         /* xác định nó là điểm neo là thằng cha của các thẻ div chứa trong nó */
+    margin-bottom: 15px;
 }
 
-.icon{
-    position: absolute;
-    left: 15px;
-    bottom: 20px;
-    border-radius: 50%;
-    width: 10%;
+.hidden {
+    position: absolute;         /* xác định nó là thằng con nằm trong thằng cha của thẻ div có position: relative */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    height: 70px;
+    background-image: linear-gradient(180deg,rgba(67,69,76,0),rgba(56,58,63,.32),rgba(53,54,60,.41) 21%,#202125);    /* background của div */
     visibility: hidden;
 }
 
-.image:hover .icon{
-    visibility: visible;
+.image {
+    border-radius: 50%;
 }
 
+.icon{
+    left: 15px;
+    top: 25px;
+    position: absolute;         /* thằng con nằm trong thằng cha */
+    width: 10%;
+    border-radius: 50%;   
+}
+
+.textup {
+    position: absolute; 
+    font-size: 18px;
+    font-family: Inter,Lato,Open Sans,Corbel,Arial,sans-serif;
+    left: 60px;
+    top: 0px;
+    color: #fff;
+ 
+}
+
+.textdown {
+    position: absolute; 
+    font-size: 18px;
+    font-family: Inter,Lato,Open Sans,Corbel,Arial,sans-serif;
+    left: 60px;
+    top: 20px;
+    color: #fff;
+}
+
+.img:hover .hidden{
+    visibility: visible; 
+}
 
 @media screen and (max-width: 800px) {
     body {
@@ -60,6 +96,7 @@ img {
     .img-column {
         width: 50%;
     }
+
     html {
         font-size: 10px;
     }
@@ -72,7 +109,18 @@ img {
     .img-column {
         width: 100%;
     }
+
+    .icon{
+        width: 5%;
+    }
+
     html {
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .img:hover .hidden{
+        visibility: hidden; 
     }
 }
