@@ -1,0 +1,7 @@
+
+
+
+có 2 loại thẻ trong html là : thẻ inline và thẻ block
+
+- thẻ inline là thẻ trên 1 dòng
+- thẻ block là thẻ trên 1 hàng

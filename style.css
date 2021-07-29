@@ -1,5 +1,6 @@
 body{
-    background-image: url("picture/phong.jpg");         /* phông nền */
+           /* phông nền */ /* transition */
+    margin:0;
 }
 html {
     font-size: 30px;
@@ -11,7 +12,7 @@ html {
 
 .box-img {
     display: flex;
-    width: 97%;
+    width: 100%;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -25,9 +26,9 @@ html {
 }
 
 input{
-    width: 95%;
+    width: 95%;             /* with set 95% còn 5% muốn canh đều 2 bên thì set margin ở dưới*/    
     padding: 12px 20px;
-    margin: 8px 30PX;
+    margin: 8px 2.5%;       /* margin : 8px 2.5% top-bottom, left -right có nghĩa top-bottom: 8px, left-right: 2.5%*/
     border: 1px solid grey;
     /* border-bottom: 1px solid grey; */
     border-radius: 20px;
@@ -90,8 +91,8 @@ img {
 }
 
 @media screen and (max-width: 800px) {
-    body {
-        background-color: lightblue;
+    .box-img {
+        background: red;
     }
     .img-column {
         width: 50%;
@@ -103,8 +104,8 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        background-color: grey;
+    .box-img {
+        background: blue;
     }
     .img-column {
         width: 100%;
