@@ -1,50 +1,96 @@
 body{
-           /* phông nền */ /* transition */
+    /* background-image: ;       /* phông nền */ /* transition */
     margin:0;
 }
-html {
+html{
     font-size: 30px;
 }
-.title {
-    margin-left: 30px;
-    color: teal;
+.logo{
+    margin-left: 15px;
+}
+.search{
+    
+}
+.id {
+    margin-left: 20px;
+}
+.menu{
+    width: 100%;
+    top: 0px;
+    display: flex;
+    position: fixed;
+    background-color: white;
+    /* box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12);   hiệu ứng đổ bóng */
+    align-items: center;                    /* căn giữa các item trong thẻ div */
+    z-index: 1;
+    /* opacity: 0.5;      độ mờ */  
 }
 
-.box-img {
+a{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.abc{
+    margin-top: 14px;
+}
+.header>ul>li{
+    list-style-type: none;                  /* bỏ mặc định dấu chấm của thẻ li */
+    margin-right: 25px;
+    border-bottom: rgb(209, 37, 37);
+}
+.header>ul{
+    display: flex;
+}
+.header>ul>li>a:hover{
+    border-bottom: rgb(209, 37, 37);
+}
+.title{
+    margin-top: 100px;
+    margin-left: 20px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;       /* https://fonts.google.com/ */
+}
+.box-img{
     display: flex;
     width: 100%;
     margin: auto;
     flex-wrap: wrap;
+    padding: 10px;
+    box-sizing: border-box;
 }
-
-.img-column {
+.abc{
+    display: block;
+}
+.img-column{
     display: flex;
     flex-direction: column;
     width: 25%;    
     padding: 10px;
     box-sizing: border-box;
 }
-
 input{
-    width: 95%;             /* with set 95% còn 5% muốn canh đều 2 bên thì set margin ở dưới*/    
+    width: 97%;             /* with set 95% còn 5% muốn canh đều 2 bên thì set margin ở dưới*/    
     padding: 12px 20px;
-    margin: 8px 2.5%;       /* margin : 8px 2.5% top-bottom, left -right có nghĩa top-bottom: 8px, left-right: 2.5%*/
+    margin: 8px 1.5%;       /* margin : 8px 2.5% top-bottom, left -right có nghĩa top-bottom: 8px, left-right: 2.5%*/
     border: 1px solid grey;
     /* border-bottom: 1px solid grey; */
     border-radius: 20px;
 }
-
-img {   
+img{   
     border-radius: 5%;           /* viền ảnh */
     width: 100%;
 }
-
-.img {
+.img{
     position: relative;         /* xác định nó là điểm neo là thằng cha của các thẻ div chứa trong nó */
     margin-bottom: 15px;
 }
-
-.hidden {
+.hidden{
     position: absolute;         /* xác định nó là thằng con nằm trong thằng cha của thẻ div có position: relative */
     right: 0;
     bottom: 0;
@@ -54,11 +100,9 @@ img {
     background-image: linear-gradient(180deg,rgba(67,69,76,0),rgba(56,58,63,.32),rgba(53,54,60,.41) 21%,#202125);    /* background của div */
     visibility: hidden;
 }
-
-.image {
+.image{
     border-radius: 50%;
 }
-
 .icon{
     left: 15px;
     top: 25px;
@@ -66,8 +110,7 @@ img {
     width: 10%;
     border-radius: 50%;   
 }
-
-.textup {
+.textup{
     position: absolute; 
     font-size: 18px;
     font-family: Inter,Lato,Open Sans,Corbel,Arial,sans-serif;
@@ -76,8 +119,7 @@ img {
     color: #fff;
  
 }
-
-.textdown {
+.textdown{
     position: absolute; 
     font-size: 18px;
     font-family: Inter,Lato,Open Sans,Corbel,Arial,sans-serif;
@@ -85,25 +127,24 @@ img {
     top: 20px;
     color: #fff;
 }
-
 .img:hover .hidden{
     visibility: visible; 
 }
 
-@media screen and (max-width: 800px) {
-    .box-img {
-        background: red;
+@media screen and (max-width: 800px){
+    body{
+        background-color: grey;
     }
-    .img-column {
+    .img-column{
         width: 50%;
     }
 
-    html {
+    html{
         font-size: 10px;
     }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .box-img {
         background: blue;
     }
@@ -118,9 +159,9 @@ img {
     html {
         font-size: 10px;
     }
-}
+} */
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 360px){
     .img:hover .hidden{
         visibility: hidden; 
     }
