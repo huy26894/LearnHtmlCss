@@ -6,7 +6,7 @@ html{
     font-size: 30px;
 }
 .logo{
-    margin-left: 15px;
+    margin-left: 20px;
 }
 .search{
     
@@ -62,7 +62,7 @@ a{
     margin: auto;
     flex-wrap: wrap;
     padding: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box;  /* padding và border sẽ được thêm vào element NHƯNG không làm thay đổi kích thước của phần tử. Lúc ấy phần dành cho content sẽ bị co lại để chừa chỗ cho cái padding và border */
 }
 .abc{
     display: block;
